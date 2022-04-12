@@ -34,6 +34,7 @@ int main()
 }
 */
 
+/*
 int main()
 {
     //atleast once
@@ -45,3 +46,37 @@ int main()
         cin >> guess;
     } while(guess != password);
 }
+*/
+
+// break & continue
+/*
+int main()
+{
+    string sentence = "Yada yada yayaya yatta";
+    for(int i = 0; i < sentence.size(); i++)
+    {
+        if(sentence[i] == 't')
+        {
+            continue;
+        }
+        cout << sentence[i] << std::endl;
+        
+    }
+    cout << "Done bishes!\n";
+}
+*/
+
+// conditional operator
+
+/*
+int main()
+{
+    int answer = 11;
+    cout << "Guess number you ham: ";
+    int guess;
+    cin >> guess;
+    guess == answer ? cout << "Good job\n" : cout << "Bad job\n";
+    // int points = guess == answer ? 10 : 0;
+    // cout << points << std::endl;
+}
+*/

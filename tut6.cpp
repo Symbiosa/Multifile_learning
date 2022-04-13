@@ -218,4 +218,4 @@ int main()
 {
     vector<int> data = {1, 2, 3};
     print_vector(data);
-}                           // Started to require -static while compling? Not sure, lost and scared!
+}                           // Started to require -static while compling? Not sure, what causes

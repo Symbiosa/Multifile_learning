@@ -3,11 +3,10 @@
 #include <string>
 #include <limits>
 #include <ctime>
-#include <istream>
 #include <vector>
 
-using std::cout;
 using std::cin;
+using std::cout;
 using std::string;
 using std::vector;
 
@@ -123,53 +122,52 @@ int main()
 // Using and Array to keep track of guessing
 // Simple guessing game
 
-/*
-void print_array(int array[], int count)
+
+void print_vector(vector<int> vector)                   // adds +1 to vector everytime  play game is ran
 {
-    for(int i = 0; i < count; i++)
+    for(int i = 0; i < vector.size(); i++)
     {
-        cout << array[i] << "\t";
+        cout << vector[i] << "\t";
     }
     cout << "\n";
 }
 
 void play_game()
 {
-    int guesses[250];
-    int guess_count = 0;
+    vector<int> guesses;     
 
     int random = rand() % 251;  //random number from 0-250
     cout << random << std::endl;
     cout << "Toss a number: ";
     while(true)                 //while loop for guesses
     {
-        int guess;
-        cin >> guess;
-        guesses[guess_count++] = guess; // every guess adds +1 guesses
+        int guessi;                                  // couldnt get vector input work, but worked around it. Not the most elegant, but does the job. 
+        std::cin >> guessi;                         // takes user input for random number guess.   
+        guesses.push_back(guessi);                  // Pushes the guess to vector guessess for tracking
         // guess_count++;
-        if(guess == random)
+        if(guessi == random)                        // if guess equals to random number, we got a winner.
         {
             cout << "You lucky mofo, +1 \n";
             break;
-        } else if (guess < random)
+        } else if (guessi < random)                 // if guessed number is smaller than random 
         {
             cout << "Haha too frikkin low, git gud! \n";
-        } else
+        } else                                      // else ( if number is bigger than random number)
         {
             cout << "Whooaaa, we trying to compensate something? Try going lower! \n";
         }
     }
-    print_array(guesses, guess_count);
+    print_vector(guesses);
 }
 
-int main()
+int main()              //Menu for starting / quitting the game
 {
     srand(time(NULL));  //uses internal clock to control random number seed
     int choice;         // int for choosing to play or not to play
     do
     {
        cout << "0. QUIT" << std::endl << "1. PLAY GAME\n"; 
-       cin >> choice;
+       std::cin >> choice;
 
        switch(choice)
        {
@@ -184,7 +182,7 @@ int main()
     } while (choice != 0);
     
 }
-*/
+
 
 // Vectoooooooor stuff
 // Array is static, while vector goes brrrrr. std::vector< int > items = {12, 13}.      items.push-back(100)
@@ -205,7 +203,8 @@ int main()
 }
 */
 
-void print_vector(vector<int> data)
+/*
+void print_vector(vector<int> &data)
 {
     data.push_back(12);
     for(int i = 0; i < data.size(); i++)
@@ -218,4 +217,11 @@ int main()
 {
     vector<int> data = {1, 2, 3};
     print_vector(data);
+    print_vector(data);
+    print_vector(data);
+    print_vector(data);
+    print_vector(data);
+    print_vector(data);
 }                           // Started to require -static while compling? Not sure, what causes
+*/
+

@@ -22,23 +22,24 @@ void print_vector(std::vector<int> vector)
 
 void play_game()
 {
-    std::vector<int> guesses;
-    
+    vector<int> guesses;
+    int gue;
     int random = rand() % 251;  //random number from 0-250
     cout << random << std::endl;
     cout << "Toss a number: ";
     while(true)                 //while loop for guesses
     {
-        std::vector<int> gu;
-        while(cin >> gu)
-
-        guesses.push_back(gu);
+        vector<int> gu;
         
-        if(gu == random)
+        cin >> gue;
+
+        guesses.push_back(gue);
+        
+        if(gue == random)
         {
             cout << "You lucky mofo, +1 \n";
             break;
-        } else if (gu < random)
+        } else if (gue < random)
         {
             cout << "Haha too frikkin low, git gud! \n";
         } else
